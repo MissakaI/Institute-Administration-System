@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1200.0" styleClass="mainFxmlClass" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox prefHeight="700.0" prefWidth="150.0" />
+        <Label id="lblTitle" layoutX="363.0" layoutY="20.0" text="Mark Student Attendance : By Class">
+            <font>
+                <Font name="MyriadPro-Bold" size="34.0" />
+            </font>
+        </Label>
+      <Label layoutX="187.0" layoutY="155.0" text="Tutor">
+         <font>
+            <Font name="MyriadPro-SemiboldIt" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="456.0" layoutY="95.0" text="Batch">
+         <font>
+            <Font name="MyriadPro-SemiboldIt" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="684.0" layoutY="95.0" prefHeight="28.0" prefWidth="82.0" text="Subject">
+         <font>
+            <Font name="MyriadPro-SemiboldIt" size="24.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbSection" layoutX="292.0" layoutY="90.0" onAction="#cmbSectionAction" promptText="Section" />
+      <JFXComboBox fx:id="cmbYear" layoutX="560.0" layoutY="90.0" onAction="#cmbYearsAction" promptText="Batch" />
+      <JFXComboBox fx:id="cmbSubject" layoutX="781.0" layoutY="90.0" onAction="#cmbSubjectAction" promptText="Subject" />
+      <JFXComboBox fx:id="cmbTutor" layoutX="291.0" layoutY="150.0" onAction="#cmbTutorAction" promptText="Tutor" />
+      <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="496.0" layoutY="207.0" onAction="#btnAddAction" prefHeight="45.0" prefWidth="100.0" text="Add" textFill="WHITE">
+         <font>
+            <Font name="MyriadPro-Semibold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton id="btnBlue" fx:id="btnMakePayment" buttonType="RAISED" layoutX="618.0" layoutY="207.0" onAction="#btnMakePaymentAction" prefHeight="45.0" text="Make Payment" />
+      <JFXButton id="btnRed" fx:id="btnRemove" buttonType="RAISED" layoutX="852.0" layoutY="207.0" prefHeight="45.0" prefWidth="100.0" text="Remove" />
+      <Label layoutX="188.0" layoutY="95.0" text="Section">
+         <font>
+            <Font name="MyriadPro-SemiboldIt" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblAttendance" layoutX="188.0" layoutY="268.0" prefHeight="406.0" prefWidth="770.0">
+        <columns>
+          <TableColumn fx:id="colRid" prefWidth="75.0" text="Reg ID" />
+          <TableColumn fx:id="colSid" prefWidth="75.0" text="Student ID" />
+            <TableColumn fx:id="colDate" prefWidth="75.0" text="Date" />
+            <TableColumn fx:id="colCheckIn" prefWidth="75.0" text="Check-In" />
+            <TableColumn fx:id="colPayment" prefWidth="75.0" text="Payment Status" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label layoutX="187.0" layoutY="215.0" prefHeight="28.0" text="Student ID">
+         <font>
+            <Font name="MyriadPro-SemiboldIt" size="24.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtSID" layoutX="304.0" layoutY="215.0" onKeyReleased="#txtSidKeyReleaseAction" promptText="Student ID" />
+      <ImageView fx:id="imgStudent" fitHeight="260.0" fitWidth="200.0" layoutX="978.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="lblFName" layoutX="978.0" layoutY="302.0" text="FName" />
+      <Label fx:id="lblLName" layoutX="978.0" layoutY="340.0" text="LName" />
+      <Label fx:id="lblNIC" layoutX="978.0" layoutY="379.0" text="NIC" />
+      <Label fx:id="lblPaymentStatus" layoutX="979.0" layoutY="414.0" text="Payment Sataus" />
+      <Label fx:id="lblPaymentDate" layoutX="979.0" layoutY="448.0" text="Payment Date" />
+    </children>
+</AnchorPane>

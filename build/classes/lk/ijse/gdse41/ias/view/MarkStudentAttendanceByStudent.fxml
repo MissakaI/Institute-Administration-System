@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #e6e6fe;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@markstudentattendancebystudent.css" />
+    </stylesheets>
+        <children>
+            <VBox prefHeight="700.0" prefWidth="150.0" />
+            <Label layoutX="188.0" layoutY="20.0" style="-fx-text-fill-color: #FFFDE7;" text="Mark Student Attendance : By Student">
+                <font>
+                    <Font name="MyriadPro-Bold" size="34.0" />
+                </font>
+            </Label>
+            <JFXComboBox layoutX="554.0" layoutY="160.0" promptText="Tutor" />
+            <Label layoutX="458.0" layoutY="165.0" text="Tutor">
+                <font>
+                   <Font name="MyriadPro-SemiboldIt" size="24.0" />
+                </font>
+            </Label>
+      <JFXComboBox layoutX="305.0" layoutY="160.0" promptText="Subject" />
+      <Label layoutX="188.0" layoutY="165.0" prefHeight="28.0" prefWidth="82.0" text="Subject">
+         <font>
+            <Font name="MyriadPro-SemiboldIt" size="24.0" />
+         </font>
+      </Label>
+      <JFXComboBox layoutX="305.0" layoutY="93.0" promptText="Student" />
+      <Label layoutX="188.0" layoutY="98.0" text="Student ID">
+         <font>
+            <Font name="MyriadPro-SemiboldIt" size="24.0" />
+         </font>
+      </Label>
+        </children>
+    
+</AnchorPane>

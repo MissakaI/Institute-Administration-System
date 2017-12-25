@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2017-06-02T03:02:33 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TutorPayment" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4577bd8f-6562-4139-9326-058526cbe21d">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<subDataset name="Table 1" uuid="11dd485e-c6f9-404c-8b42-265d5a8b0701">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<parameter name="Tutor Name" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="no_of_students" class="java.lang.Integer">
+		<fieldDescription><![CDATA[no_of_students]]></fieldDescription>
+	</field>
+	<field name="no_of_free_cards" class="java.lang.Integer">
+		<fieldDescription><![CDATA[no_of_free_cards]]></fieldDescription>
+	</field>
+	<field name="total_amount" class="java.lang.Double">
+		<fieldDescription><![CDATA[total_amount]]></fieldDescription>
+	</field>
+	<field name="commission" class="java.lang.Double">
+		<fieldDescription><![CDATA[commission]]></fieldDescription>
+	</field>
+	<field name="pay_amount" class="java.lang.Double">
+		<fieldDescription><![CDATA[pay_amount]]></fieldDescription>
+	</field>
+	<field name="prev_pay_amount" class="java.lang.Double">
+		<fieldDescription><![CDATA[prev_pay_amount]]></fieldDescription>
+	</field>
+	<field name="prev_pay_Date" class="java.lang.String">
+		<fieldDescription><![CDATA[prev_pay_Date]]></fieldDescription>
+	</field>
+	<field name="section_subject_batch_classId" class="java.lang.String">
+		<fieldDescription><![CDATA[section_subject_batch_classId]]></fieldDescription>
+	</field>
+	<field name="month" class="java.lang.String">
+		<fieldDescription><![CDATA[month]]></fieldDescription>
+	</field>
+	<variable name="Total_Tutor_Pay" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{pay_amount}]]></variableExpression>
+	</variable>
+	<variable name="Total_Prev_Pay" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{prev_pay_amount}]]></variableExpression>
+	</variable>
+	<variable name="Amount_Payable" class="java.lang.Double">
+		<variableExpression><![CDATA[$V{Total_Tutor_Pay}-$V{Total_Prev_Pay}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="89" splitType="Stretch">
+			<staticText>
+				<reportElement x="260" y="12" width="285" height="40" uuid="e1d39d21-78f6-4742-980e-3fab414d1c2b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Black" size="22"/>
+				</textElement>
+				<text><![CDATA[Payment Reciept]]></text>
+			</staticText>
+			<!--
+                        <image>
+				<reportElement x="5" y="-7" width="234" height="79" uuid="eba4ffb6-f8b0-4208-aaed-5f076621bf9e"/>
+				<imageExpression><![CDATA["lk/ijse/gdse41/ias/resources/images/Sathra logo_final_reduced.png"]]></imageExpression>
+			</image>
+                        -->
+		</band>
+	</title>
+	<pageHeader>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="5" y="1" width="100" height="19" uuid="92f703d1-7ae3-4722-bded-77e37bf3ba28"/>
+				<textElement>
+					<font fontName="DejaVu Serif" size="15"/>
+				</textElement>
+				<text><![CDATA[Tutor	:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="25" width="100" height="19" uuid="7896417b-98c6-4e79-b378-fdf4303d9a80"/>
+				<textElement>
+					<font fontName="DejaVu Serif" size="15"/>
+				</textElement>
+				<text><![CDATA[Date		:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="109" y="1" width="436" height="19" uuid="82e5538a-68ce-40bc-bdf6-fac93f8c91aa"/>
+				<textElement>
+					<font fontName="DejaVu Serif" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Tutor Name}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="109" y="25" width="231" height="19" uuid="f78653da-7fae-4e9c-892d-f0c342f6f243"/>
+				<textElement>
+					<font fontName="DejaVu Serif" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="-1" y="47" width="557" height="1" backcolor="#000000" uuid="e1ec428c-6a0f-45f0-989e-0986555a1ac4"/>
+			</rectangle>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="171" splitType="Stretch">
+			<rectangle>
+				<reportElement x="2" y="160" width="557" height="1" backcolor="#000000" uuid="73f0f76f-92d4-4a55-b3e2-ca033175f02c"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="5" y="5" width="100" height="21" uuid="3ed960cf-76d1-467c-8db1-ac349aee5f22"/>
+				<textElement>
+					<font fontName="DejaVu Serif" size="13"/>
+				</textElement>
+				<text><![CDATA[Class		:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="31" width="100" height="20" uuid="62ae1451-f64b-4726-9ddb-02f41b5490f7"/>
+				<textElement>
+					<font fontName="DejaVu Serif" size="13"/>
+				</textElement>
+				<text><![CDATA[Month	:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="5" width="434" height="21" uuid="13750ca1-abbc-487a-b6f7-dc994342c5b1"/>
+				<textElement>
+					<font fontName="DejaVu Serif" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{section_subject_batch_classId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="31" width="171" height="21" uuid="9d0658d1-5697-4d90-b27d-6df753701083"/>
+				<textElement>
+					<font fontName="DejaVu Serif" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{month}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="0" y="93" width="111" height="30" backcolor="#E2EFD9" uuid="ef27fecb-ac20-4b00-8566-bafd2f11bf59"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="7">
+					<pen lineColor="#70AD47"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="13"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{no_of_students}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="111" y="93" width="111" height="30" backcolor="#E2EFD9" uuid="39ecc58c-2b5f-409e-9c69-939fd7af97b3"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="7">
+					<pen lineColor="#70AD47"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="13"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{no_of_free_cards}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="222" y="93" width="111" height="30" backcolor="#E2EFD9" uuid="2ce47900-446c-469e-987e-37c4f130fc87"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="7">
+					<pen lineColor="#70AD47"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="13"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="333" y="93" width="111" height="30" backcolor="#E2EFD9" uuid="f386b5c4-2f43-43fb-8b7b-b3f5caded7e8"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="7">
+					<pen lineColor="#70AD47"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="13"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{commission}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="444" y="93" width="111" height="30" backcolor="#E2EFD9" uuid="363c8b85-5abb-4f61-aee2-c27b9fb664a3"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="7">
+					<pen lineColor="#70AD47"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="13"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pay_amount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="63" width="111" height="30" forecolor="#FFFFFF" backcolor="#70AD47" uuid="af2fa535-578d-4e98-bd1b-500966f09009">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineColor="#70AD47"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<text><![CDATA[Cards Issued]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="111" y="63" width="111" height="30" forecolor="#FFFFFF" backcolor="#70AD47" uuid="cbd69d19-dcb6-404c-b7a4-0a5f74c308af">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineColor="#70AD47"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<text><![CDATA[Free Cards]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="222" y="63" width="111" height="30" forecolor="#FFFFFF" backcolor="#70AD47" uuid="ef426734-8dba-42c1-ae69-0cf6e15e67fe">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineColor="#70AD47"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<text><![CDATA[Total Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="333" y="63" width="111" height="30" forecolor="#FFFFFF" backcolor="#70AD47" uuid="81ed03d2-d9ed-4012-a280-c325f79e9db1">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineColor="#70AD47"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<text><![CDATA[Commission]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="444" y="63" width="111" height="30" forecolor="#FFFFFF" backcolor="#70AD47" uuid="a4e14801-94b1-4dd9-a27d-04d097c0abb5">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineColor="#70AD47"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#70AD47"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Black" size="12"/>
+				</textElement>
+				<text><![CDATA[Tutor's Pay]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="138" width="240" height="18" uuid="141220bb-78a8-4f59-a3b5-58fbb1b7a8ea"/>
+				<textElement>
+					<font fontName="DejaVu Serif"/>
+				</textElement>
+				<text><![CDATA[Reductions due to previous payment made on]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="239" y="138" width="80" height="18" uuid="ba969cb2-3295-4df5-8272-069669d79e49"/>
+				<textElement>
+					<font fontName="DejaVu Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{prev_pay_Date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="319" y="138" width="76" height="18" uuid="02bad6eb-6553-4a65-8703-2897bd330aa0"/>
+				<textElement>
+					<font fontName="DejaVu Serif"/>
+				</textElement>
+				<text><![CDATA[an amount of]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="395" y="138" width="100" height="18" uuid="9c454269-c2b6-485e-9223-36f2033247f3"/>
+				<textElement>
+					<font fontName="DejaVu Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA["LKR "+$F{prev_pay_amount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="355" y="0" width="100" height="30" uuid="ccfa4ed6-8577-485e-93e2-1ac4768b13d8"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="455" y="0" width="100" height="30" uuid="10a55909-a1b0-4457-afd2-2028a1aa0053"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="130" splitType="Stretch">
+			<staticText>
+				<reportElement x="287" y="18" width="156" height="20" uuid="2db061e1-c79d-4312-8ac0-1e671f121d62"/>
+				<textElement>
+					<font fontName="Arial" size="15"/>
+				</textElement>
+				<text><![CDATA[Total Payable Amount]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="450" y="19" width="100" height="18" uuid="5fc8fe76-c06d-4ecc-b19f-d7df1e18ee1e"/>
+				<textElement>
+					<font fontName="Arial" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["LKR "+$V{Amount_Payable}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="31" y="90" width="120" height="1" backcolor="#000000" uuid="64057638-d037-4cb3-9d71-4e5e525a6fbb">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineColor="#000000"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="42" y="100" width="96" height="30" uuid="7784ffe8-4281-4c05-98e9-9d14c26af572"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Serif" size="12"/>
+				</textElement>
+				<text><![CDATA[Manager]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="409" y="99" width="96" height="30" uuid="8edef41a-cb88-4aef-b02d-31764143cd8d"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Serif" size="12"/>
+				</textElement>
+				<text><![CDATA[Tutor]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="398" y="90" width="120" height="1" backcolor="#050000" uuid="0da1c155-28f3-4310-b640-f1a5f547aa27">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineColor="#000000"/>
+				</graphicElement>
+			</rectangle>
+		</band>
+	</summary>
+</jasperReport>

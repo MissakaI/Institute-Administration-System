@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import java.net.URL?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="700.0" prefWidth="1200.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse41.ias.view.DashBoardController">
+    <stylesheets>
+        <URL value="@dashboard.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane fx:id="contain" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: linear-gradient(to top, #96c93d, #00b09b);;" />
+      <AnchorPane fx:id="shade" opacity="0.42" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #088c9b;" />
+      <JFXDrawer fx:id="drwr" defaultDrawerSize="300.0" prefHeight="700.0" prefWidth="300.0" resizableOnDrag="true">
+         <effect>
+            <DropShadow height="7.45" radius="20.052500000000002" spread="0.5" width="74.76" />
+         </effect></JFXDrawer>
+      <JFXHamburger fx:id="hmbrgr" layoutX="1156.0" layoutY="14.0" />
+   </children>
+</AnchorPane>

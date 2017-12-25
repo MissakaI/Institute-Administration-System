@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="InstituteAdminstrationSystem.jnlp">
+  <information>
+    <title>InstituteAdminstrationSystem</title>
+    <vendor>midda</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="InstituteAdminstrationSystem.jar" size="3784361" download="eager" />
+    <jar href="lib\OzekiSmsClient.jar" size="10179" download="eager" />
+    <jar href="lib\batik-anim-1.8.jar" size="377042" download="eager" />
+    <jar href="lib\batik-awt-util-1.8.jar" size="301028" download="eager" />
+    <jar href="lib\batik-bridge-1.8.jar" size="529674" download="eager" />
+    <jar href="lib\batik-css-1.8.jar" size="256539" download="eager" />
+    <jar href="lib\batik-dom-1.8.jar" size="140057" download="eager" />
+    <jar href="lib\batik-gvt-1.8.jar" size="144227" download="eager" />
+    <jar href="lib\batik-svg-dom-1.8.jar" size="217196" download="eager" />
+    <jar href="lib\batik-svggen-1.8.jar" size="177875" download="eager" />
+    <jar href="lib\batik-util-1.8.jar" size="107737" download="eager" />
+    <jar href="lib\commons-beanutils-1.9.0.jar" size="230951" download="eager" />
+    <jar href="lib\commons-collections-3.2.2.jar" size="588337" download="eager" />
+    <jar href="lib\commons-digester-2.1.jar" size="196768" download="eager" />
+    <jar href="lib\commons-javaflow-20160505.jar" size="54584" download="eager" />
+    <jar href="lib\commons-lang-2.6.jar" size="284220" download="eager" />
+    <jar href="lib\commons-logging-1.1.1.jar" size="60686" download="eager" />
+    <jar href="lib\itext-2.1.7.js5.jar" size="1132307" download="eager" />
+    <jar href="lib\jasperreports-6.3.1.jar" size="5527829" download="eager" />
+    <jar href="lib\jasperreports-fonts-6.3.1.jar" size="2478097" download="eager" />
+    <jar href="lib\jasperreports-javaflow-6.3.1.jar" size="5588071" download="eager" />
+    <jar href="lib\jcommon-1.0.23.jar" size="330246" download="eager" />
+    <jar href="lib\jfoenix-1.1.0.jar" size="2312030" download="eager" />
+    <jar href="lib\jfreechart-1.0.19.jar" size="1565065" download="eager" />
+    <jar href="lib\jfxtras-labs-8.0-r6-20170512.080141-336-all.jar" size="4465317" download="eager" />
+    <jar href="lib\jxl-2.6.10.jar" size="743361" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+    <jar href="lib\poi-3.10.1.jar" size="1949542" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="InstituteAdminstrationSystem" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="lk.ijse.gdse41.ias.main.StartProject"  name="InstituteAdminstrationSystem" />
+  <update check="always"/>
+</jnlp>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1200.0" styleClass="mainFxmlClass" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse41.ias.view.controller.ManageHallController">
+   <children>
+      <Label id="lblTitle" layoutX="504.0" layoutY="14.0" text="Manage Halls" />
+      <Label id="lblSection" layoutX="155.0" layoutY="80.0" text="Existing Halls" />
+      <TableView fx:id="tblHall" layoutX="176.0" layoutY="114.0" onMouseClicked="#tblHallClickAction" prefHeight="524.0" prefWidth="509.0">
+        <columns>
+          <TableColumn fx:id="colHName" editable="false" prefWidth="75.0" text="Hall Name" />
+          <TableColumn fx:id="colSeating" editable="false" prefWidth="75.0" text="Seating Capacity" />
+            <TableColumn fx:id="colAC" editable="false" prefWidth="75.0" text="A/C" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label id="lblSection" layoutX="697.0" layoutY="80.0" text="Hall Details" />
+      <Label layoutX="711.0" layoutY="114.0" text="Hall Name" />
+      <JFXTextField fx:id="txtHID" layoutX="913.0" layoutY="112.0" prefHeight="27.0" prefWidth="186.0" />
+      <Label layoutX="711.0" layoutY="163.0" text="Seating Capacity" />
+      <Spinner fx:id="spnrSeatCap" editable="true" layoutX="913.0" layoutY="163.0" />
+      <Label layoutX="711.0" layoutY="214.0" text="A/C" />
+      <JFXButton id="btnGreen" fx:id="btnNew" buttonType="RAISED" layoutX="913.0" layoutY="260.0" onAction="#btnNewAction" prefHeight="45.0" prefWidth="186.0" text="New Hall" />
+      <JFXToggleButton fx:id="tglBtnAC" layoutX="899.0" layoutY="198.0" prefHeight="48.0" prefWidth="168.0" text="Available">
+         <font>
+            <Font name="Yu Gothic Medium" size="21.0" />
+         </font>
+      </JFXToggleButton>
+      <JFXButton id="btnBlack" fx:id="btnClear" buttonType="RAISED" layoutX="774.0" layoutY="260.0" onAction="#btnClearAction" prefHeight="45.0" prefWidth="125.0" text="Clear Fields" />
+   </children>
+</AnchorPane>

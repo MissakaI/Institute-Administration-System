@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1200.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse41.ias.view.controller.AddInstructorSubjectsController">
+    <stylesheets>
+        <URL value="@Style.css" />
+    </stylesheets>
+    <children>
+        <Label id="lblTitle" layoutX="375.0" layoutY="22.0" text="Register New Tutor : Include Subjects">
+         <font>
+            <Font name="MyriadPro-Bold" size="34.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtTutId" editable="false" layoutX="308.0" layoutY="85.0" prefColumnCount="8">
+         <font>
+            <Font name="MyriadPro-Light" size="24.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="188.0" layoutY="90.0" text="Tutor ID">
+         <font>
+            <Font name="MyriadPro-SemiboldIt" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="506.0" layoutY="90.0" text="Tutor Name">
+         <font>
+            <Font name="MyriadPro-SemiboldIt" size="24.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtTutName" editable="false" layoutX="641.0" layoutY="85.0" prefColumnCount="25">
+         <font>
+            <Font name="MyriadPro-Light" size="24.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="188.0" layoutY="225.0" text="Section">
+         <font>
+            <Font name="MyriadPro-SemiboldIt" size="24.0" />
+         </font>
+      </Label>
+      <Label id="lblSection" layoutX="155.0" layoutY="169.0" text="Subject Info">
+         <font>
+            <Font name="MyriadPro-BoldIt" size="24.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbSection" layoutX="310.0" layoutY="220.0" onAction="#cmbSectionAction" promptText="Section" />
+      <JFXComboBox fx:id="cmbSubject" layoutX="641.0" layoutY="220.0" onAction="#cmbSubjectsAction" promptText="Subject" />
+      <Label layoutX="506.0" layoutY="224.0" prefHeight="28.0" prefWidth="82.0" text="Subject">
+         <font>
+            <Font name="MyriadPro-SemiboldIt" size="24.0" />
+         </font>
+      </Label>
+      <JFXButton id="btnBlue" fx:id="btnAddMissingSub" buttonType="RAISED" layoutX="853.0" layoutY="280.0" onAction="#btnAddMissingSubAction" prefHeight="45.0" prefWidth="250.0" text="Add Missing Subject" textFill="WHITE">
+         <font>
+            <Font name="MyriadPro-Semibold" size="16.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane fx:id="pnlAddMissingSub" layoutX="178.0" layoutY="196.0" prefHeight="146.0" prefWidth="938.0" styleClass="background">
+         <children>
+            <Label layoutX="10.0" layoutY="29.0" text="Section">
+               <font>
+                  <Font name="MyriadPro-SemiboldIt" size="24.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cmbSection1" layoutX="104.0" layoutY="24.0" onAction="#cmbSection1Action" promptText="Section" />
+            <Label layoutX="491.0" layoutY="28.0" prefHeight="28.0" prefWidth="82.0" text="Subject">
+               <font>
+                  <Font name="MyriadPro-SemiboldIt" size="24.0" />
+               </font>
+            </Label>
+            <JFXButton id="btnBlue" fx:id="btnCancel" buttonType="RAISED" layoutX="676.0" layoutY="84.0" onAction="#btnCancelAction" prefHeight="45.0" prefWidth="250.0" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font name="MyriadPro-Semibold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="txtSection" layoutX="263.0" layoutY="27.0" prefHeight="29.0" prefWidth="190.0" promptText="If section not available" />
+            <JFXTextField fx:id="txtSubject" layoutX="583.0" layoutY="27.0" prefHeight="29.0" prefWidth="240.0" promptText="Subject Name" />
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="706.0" layoutY="280.0" onAction="#btnAddAction" prefHeight="45.0" prefWidth="125.0" style="-fx-background-color: #009688;" text="Include" textFill="WHITE">
+         <font>
+            <Font name="MyriadPro-Semibold" size="16.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblSubjects" layoutX="188.0" layoutY="350.0" prefHeight="213.0" prefWidth="915.0">
+        <columns>
+          <TableColumn fx:id="colTutId" editable="false" prefWidth="75.0" text="Tutor ID" />
+          <TableColumn fx:id="colSubId" editable="false" prefWidth="75.0" text="Subject ID" />
+            <TableColumn fx:id="colSub" editable="false" prefWidth="75.0" text="Subject" />
+            <TableColumn fx:id="colSection" editable="false" prefWidth="75.0" text="Section" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <JFXButton fx:id="btnNext" buttonType="RAISED" layoutX="853.0" layoutY="596.0" onAction="#btnNextAct" prefHeight="45.0" prefWidth="250.0" text="Next : Summary" textFill="WHITE">
+         <font>
+            <Font name="MyriadPro-Semibold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnBack" buttonType="RAISED" layoutX="706.0" layoutY="596.0" onAction="#btnBackAction" prefHeight="45.0" prefWidth="125.0" style="-fx-background-color: #34495E;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="MyriadPro-Semibold" size="16.0" />
+         </font>
+      </JFXButton>
+      <VBox prefHeight="700.0" prefWidth="140.0" spacing="15.0" styleClass="vbox">
+         <children>
+            <ImageView fx:id="imgSchedule" fitHeight="80.0" fitWidth="106.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/icons/Planner_52px_edit.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="imgRegister" fitHeight="80.0" fitWidth="106.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/icons/Businessman_52px_edited.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="imgPayments" fitHeight="80.0" fitWidth="106.0" onMouseClicked="#imgPaymentAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/icons/Refund%202_52px_edited.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+         <effect>
+            <DropShadow height="27.22" radius="14.665" spread="0.17" width="33.44" />
+         </effect>
+      </VBox>
+    </children>
+</AnchorPane>

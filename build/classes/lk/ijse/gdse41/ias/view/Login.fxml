@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="465.0" maxWidth="1000.0" prefHeight="465.0" prefWidth="700.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse41.ias.view.controller.LoginController">
+    <stylesheets>
+        <URL value="@login.css" />
+    </stylesheets>
+    <children>
+      <ImageView fitHeight="472.0" fitWidth="744.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/books_0%20edited_1.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="username" layoutX="170.0" layoutY="218.0" promptText="Username" />
+      <PasswordField fx:id="password" layoutX="389.0" layoutY="218.0" promptText="Password" />
+      <Button fx:id="LogIn" layoutX="341.0" layoutY="272.0" mnemonicParsing="false" style="-fx-background-color: #009688;" styleClass="Button" text="Log In" textFill="WHITE" />
+      <Label layoutX="154.0" layoutY="162.0" text="Authorized Personnel Only" textFill="WHITE">
+         <font>
+            <Font name="Commons Regular" size="34.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" styleClass="mainFxmlClass" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse41.ias.view.controller.RegisterInstructorController">
+   <children>
+      <Label id="lblTitle" layoutX="508.0" layoutY="14.0" style="-fx-text-fill-color: #FFFDE7;" text="Register New Tutor">
+         <font>
+            <Font name="MyriadPro-Bold" size="34.0" />
+         </font>
+      </Label>
+      <VBox prefHeight="700.0" prefWidth="140.0" spacing="15.0" styleClass="vbox">
+         <children>
+            <ImageView fx:id="imgSchedule" fitHeight="80.0" fitWidth="106.0" onMouseClicked="#imgScheduleAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/icons/Planner_52px_edit.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="imgRegister" fitHeight="80.0" fitWidth="106.0" onMouseClicked="#imgRegisterAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/icons/Businessman_52px_edited.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="imgPayments" fitHeight="80.0" fitWidth="106.0" onMouseClicked="#imgPaymentAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/icons/Refund%202_52px_edited.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+         <effect>
+            <DropShadow height="27.22" radius="14.665" spread="0.17" width="33.44" />
+         </effect>
+      </VBox>
+      <JFXTextField fx:id="txtTutId" layoutX="308.0" layoutY="88.0" prefColumnCount="8">
+         <font>
+            <Font name="MyriadPro-Light" size="24.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtNIC" layoutX="759.0" layoutY="91.0" onKeyTyped="#txtNICAction" prefHeight="36.0" prefWidth="209.0">
+        <font>
+            <Font name="MyriadPro-Light" size="24.0" />
+        </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="cmbTitle" layoutX="308.0" layoutY="135.0" promptText="Title" />
+      <Label layoutX="188.0" layoutY="96.0" text="Tutor ID">
+         <font>
+            <Font name="MyriadPro-SemiboldIt" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="188.0" layoutY="181.0" text="First Name">
+         <font>
+            <Font name="MyriadPro-SemiboldIt" size="24.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtFName" layoutX="308.0" layoutY="176.0" prefHeight="36.0" prefWidth="276.0">
+        <font>
+            <Font name="MyriadPro-Light" size="24.0" />
+        </font>
+      </JFXTextField>
+      <Label layoutX="628.0" layoutY="96.0" text="NIC">
+         <font>
+            <Font name="MyriadPro-SemiboldIt" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="627.0" layoutY="181.0" text="Last Name">
+         <font>
+            <Font name="MyriadPro-SemiboldIt" size="24.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtLName" layoutX="758.0" layoutY="176.0" prefHeight="29.0" prefWidth="276.0">
+        <font>
+            <Font name="MyriadPro-Light" size="24.0" />
+        </font>
+      </JFXTextField>
+      <Label id="lblSection" layoutX="171.0" layoutY="248.0" text="Contact Info">
+         <font>
+            <Font name="MyriadPro-BoldIt" size="24.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtTelPri" layoutX="414.0" layoutY="289.0" prefHeight="36.0" prefWidth="209.0">
+        <font>
+            <Font name="MyriadPro-Light" size="24.0" />
+        </font>
+      </JFXTextField>
+      <Label layoutX="187.0" layoutY="294.0" text="Primary Telephone">
+         <font>
+            <Font name="MyriadPro-SemiboldIt" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="186.0" layoutY="346.0" text="Secondary Telephone">
+         <font>
+            <Font name="MyriadPro-SemiboldIt" size="24.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtTelSec" layoutX="414.0" layoutY="341.0" prefHeight="36.0" prefWidth="209.0">
+        <font>
+            <Font name="MyriadPro-Light" size="24.0" />
+        </font>
+      </JFXTextField>
+      <Label layoutX="647.0" layoutY="293.0" text="Address">
+         <font>
+            <Font name="MyriadPro-SemiboldIt" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="626.0" layoutY="554.0" text="Password">
+         <font>
+            <Font name="MyriadPro-SemiboldIt" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="186.0" layoutY="554.0" text="Username">
+         <font>
+            <Font name="MyriadPro-SemiboldIt" size="24.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtAddNo" layoutX="764.0" layoutY="293.0" prefHeight="29.0" prefWidth="140.0" promptText="No." />
+      <JFXTextField fx:id="txtAddLane1" layoutX="762.0" layoutY="345.0" prefHeight="29.0" prefWidth="320.0" promptText="Lane 1" />
+      <JFXTextField fx:id="txtAddLane2" layoutX="762.0" layoutY="401.0" prefHeight="29.0" prefWidth="320.0" promptText="Lane 2" />
+      <JFXTextField fx:id="txtAddCity" layoutX="762.0" layoutY="456.0" prefHeight="29.0" prefWidth="320.0" promptText="City" />
+      <JFXTextField fx:id="txtUsername" layoutX="309.0" layoutY="549.0" prefHeight="29.0" prefWidth="209.0">
+         <font>
+            <Font name="MyriadPro-Light" size="24.0" />
+         </font>
+      </JFXTextField>
+      <Label id="lblSection" layoutX="171.0" layoutY="514.0" text="System login Info">
+         <font>
+            <Font name="MyriadPro-BoldIt" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="188.0" layoutY="137.0" text="Title">
+         <font>
+            <Font name="MyriadPro-SemiboldIt" size="24.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtPassword" layoutX="758.0" layoutY="550.0" prefHeight="36.0" prefWidth="209.0">
+         <font>
+            <Font name="MyriadPro-Light" size="24.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnNext" buttonType="RAISED" layoutX="896.0" layoutY="623.0" onAction="#btnNextAction" prefHeight="45.0" prefWidth="250.0" text="Next : Add Subjects" textFill="WHITE">
+         <font>
+            <Font name="MyriadPro-Semibold" size="16.0" />
+         </font>
+      </JFXButton>
+      <Label id="lblSection" layoutX="171.0" layoutY="65.0" text="Personal Details">
+         <font>
+            <Font name="Segoe UI Black" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

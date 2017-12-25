@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1200.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse41.ias.view.controller.AddStudentSummaryController">
+    <stylesheets>
+        <URL value="@Style.css" />
+    </stylesheets>
+   <children>
+       <VBox prefHeight="700.0" prefWidth="150.0" />
+      <Label fx:id="summary" layoutX="180.0" layoutY="25.0" text="Your Summary">
+         <font>
+            <Font name="MyriadPro-Black" size="18.0" />
+         </font></Label>
+      <TableView fx:id="tblStuRegistration" layoutX="180.0" layoutY="360.0" prefHeight="213.0" prefWidth="915.0">
+         <columns>
+            <TableColumn fx:id="colTutor" editable="false" prefWidth="75.0" text="Tutor" />
+            <TableColumn fx:id="colSub" editable="false" prefWidth="75.0" text="Subject" />
+            <TableColumn fx:id="colSection" editable="false" prefWidth="75.0" text="Section" />
+            <TableColumn fx:id="colBatch" editable="false" prefWidth="75.0" text="Batch" />
+            <TableColumn fx:id="colFee" editable="false" prefWidth="75.0" text="Fee" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <JFXButton fx:id="btnBack" buttonType="RAISED" layoutX="448.0" layoutY="610.0" onAction="#btnBackAction" prefHeight="45.0" prefWidth="125.0" text="Back" textFill="WHITE" />
+      <JFXButton fx:id="btnConfirm" buttonType="RAISED" layoutX="845.0" layoutY="610.0" onAction="#btnConfirmAction" prefHeight="45.0" prefWidth="250.0" text="Confirm and Save" textFill="WHITE" />
+      <JFXButton fx:id="btnAddNewStu" buttonType="RAISED" layoutX="585.0" layoutY="610.0" onAction="#btnAddNewStAction" prefHeight="45.0" prefWidth="250.0" style="-fx-background-color: #303F9F;" text="Add new student" textFill="WHITE" />
+      
+   </children>
+</AnchorPane>

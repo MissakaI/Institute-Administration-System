@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="300.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse41.ias.view.controller.SidePaneController">
+    <stylesheets>
+        <URL value="@sidepane.fxml.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/images/sidebar1_1.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnRegStu" buttonType="RAISED" layoutX="53.0" layoutY="115.0" onAction="#btnRegStuAction" prefHeight="38.0" prefWidth="194.0" text="Register Student" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Semibold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></JFXButton>
+      <JFXButton fx:id="btnMarkStuAttend" buttonType="RAISED" layoutX="33.0" layoutY="184.0" onAction="#btnMarkStuAction" prefHeight="38.0" text="Mark Student Attendance" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Semibold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+      <JFXButton fx:id="btnManageStu" buttonType="RAISED" layoutX="53.0" layoutY="256.0" prefHeight="38.0" prefWidth="194.0" text="Manage Student" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Semibold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+      <JFXButton fx:id="btnSMS" buttonType="RAISED" layoutX="62.0" layoutY="331.0" onAction="#btnSMSAction" prefHeight="38.0" text="Messaging System" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Semibold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+      <JFXButton fx:id="btnManageEmployees" buttonType="RAISED" layoutX="62.0" layoutY="406.0" onAction="#btnManageEmployeesAction" prefHeight="38.0" text="Manage Employee" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Semibold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+      <JFXButton fx:id="btnInstructorHandling" buttonType="RAISED" layoutX="64.0" layoutY="477.0" onAction="#btnInstructorHandlingAction" prefHeight="38.0" text="Instructor handling" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Semibold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+      <JFXButton fx:id="btnManageHalls" buttonType="RAISED" layoutX="82.0" layoutY="547.0" onAction="#btnManageHallAction" prefHeight="38.0" text="Manage Halls" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Semibold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="113.0" layoutY="622.0" prefHeight="38.0" text="About" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Semibold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+   </children>
+</AnchorPane>
